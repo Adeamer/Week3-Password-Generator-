@@ -14,7 +14,9 @@ function writePassword(callbackfn) {
  console.log(confirmNumber);
  if (confirmNumber < 8 || confirmNumber > 128){
   result = alert("Must be between 8 and 128 charaters")
- }else 
+ }else {
+  writePassword2();
+ }
 
  var passwordText = document.querySelector('#password');
  passwordText.value = password;
@@ -25,39 +27,45 @@ function writePassword2 () {
   confirm("Do you want upper use upper case letters?")
   console.log("second function")
   if (true){
-  uppercase = math.floor(math.random());
-  console.log(uppercase);
-  }else{}
+    writePassword3();
+     Math.floor(Math.random() * (max - min + 1) ) + min;
+  }else{
+    
+  }
 };
+
 
 //function for lower case popup
 function writePassword3 () {
   confirm("Do you want to use lowercase letters?")
   if (true){
-  leters = math.floor(math.random());
-  }else{}
+    writePassword4();
+  //leters = math.floor(math.random());
+  }else{
+   
+  }
 };
+
 
 //function for symbols popup
 function writePassword4 () {
   confirm("Do you want to use symbols?")
   if (true){
-  charcters = math.floor(math.random());
-  }else{}
+    writePassword5();
+  //charcters = math.floor(math.random());
+  }else{
+    
+  }
 };
+
 
 //function for numbers popup
 function writePassword5 () {
   confirm("Do you want to use numbers?")
   if(true){
-    numbers = math.floor(math.random());
+    numbers = math.floor(math.random() * 10) + 1;
   }else {}
 };
-
-//for loop for 
- for (var i = 0; i<=passwordText; i++){
-  
- }
 
  //add pasword to display
  document.getElementById('card-body');
@@ -67,7 +75,3 @@ function writePassword5 () {
 // Add event listener to generate button/ calling functions
 generateBtn.addEventListener('click', writePassword)
 
-writePassword2;
-writePassword3;
-writePassword4;
-writePassword5;
