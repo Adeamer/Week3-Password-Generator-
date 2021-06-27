@@ -1,4 +1,4 @@
-// Assignment Code
+// Assignment Code/ Variables
 var generateBtn = document.querySelector('#generate');
 var confirmNumber = 0;
 var confirmUppercase;
@@ -9,7 +9,7 @@ var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var passwordText = 0;
 
 // Write password to the #password input
-function writePassword() {
+function writePassword(callbackfn) {
  confirmNumber = +prompt("Enter how many characters: Must be between 8 and 128 characters");
  console.log(confirmNumber);
  if (confirmNumber < 8 || confirmNumber > 128){
@@ -22,34 +22,35 @@ function writePassword() {
 
 //function for upper case popup
 function writePassword2 () {
-  alert("Do you want upper use upper case letters?")
+  confirm("Do you want upper use upper case letters?")
+  console.log("second function")
   if (true){
-  uppercase = math.random;
+  uppercase = math.floor(math.random());
   console.log(uppercase);
   }else{}
 };
 
 //function for lower case popup
 function writePassword3 () {
-  alert("Do you want to use lowercase letters?")
+  confirm("Do you want to use lowercase letters?")
   if (true){
-  leters = math.random;
+  leters = math.floor(math.random());
   }else{}
 };
 
 //function for symbols popup
 function writePassword4 () {
-  alert("Do you want to use symbols?")
+  confirm("Do you want to use symbols?")
   if (true){
-  charcters = math.random;
+  charcters = math.floor(math.random());
   }else{}
 };
 
 //function for numbers popup
 function writePassword5 () {
-  alert("Do you want to use numbers?")
+  confirm("Do you want to use numbers?")
   if(true){
-    numbers = math.random;
+    numbers = math.floor(math.random());
   }else {}
 };
 
@@ -59,7 +60,7 @@ function writePassword5 () {
  }
 
  //add pasword to display
- document.getElementById('card-body').value = password;
+ document.getElementById('card-body');
   var passwordText = document.querySelector('#password').value;
   passwordText.value = password;
 
